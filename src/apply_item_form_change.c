@@ -273,7 +273,10 @@ void check_and_fuse_kyurem()
                 count_pokemon= count_pokemon+1;
                 var_800D_lastresult=4;
             }
+	    else
+	    {
             var_800D_lastresult=5;
+	    }
         }
     }
 }
