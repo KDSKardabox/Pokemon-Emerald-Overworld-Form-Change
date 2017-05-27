@@ -205,7 +205,7 @@ void check_and_fuse_kyurem()
         if(species==POKE_RESHIRAM || species==POKE_ZEKROM)
         {
             u8 kyurem_slot = kyurem_slot_in_party();
-            if(!*((u32 *)fusee_data))
+            if(*((u32 *)fusee_data)!=0)
             {
                 var_800D_lastresult=3;
             }
@@ -232,9 +232,9 @@ void check_and_fuse_kyurem()
                 calculate_stats_pokekmon(kyurem);
 
                 u8 slot_of_glaciate=pokemon_move_slot(kyurem, MOVE_GLACIATE);
+                var_8004= kyurem_slot;
                 if(slot_of_glaciate!=4)
                 {
-                    var_8004= kyurem_slot;
                     var_8005= slot_of_glaciate;
                     Special_E0_delete_move();
 

@@ -11,7 +11,6 @@ kyurem_script:
 lock
 special 0xA2
 waitstate
-bufferpartypokemon 0x1 0x8004
 callasm check_and_fuse_kyurem+1
 compare 0x800D 0x1
 if 0x1 _goto successfull
@@ -29,6 +28,7 @@ release
 end
 	
 successfull:
+	bufferpartypokemon 0x1 0x8004
 	msgbox successful_string MSG_KEEPOPEN
 	closeonkeypress
 	release
