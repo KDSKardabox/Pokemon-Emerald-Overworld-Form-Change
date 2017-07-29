@@ -73,6 +73,7 @@ replace_move:
 	if 0x1 _goto none_chosen
 	special 0xE0
 	callasm teach_secret_sword+1
+	lock
 	sound 0xC6
 	msgbox one_two_string MSG_KEEPOPEN
 	waitmsg
